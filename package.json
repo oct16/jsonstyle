@@ -1,0 +1,25 @@
+{
+  "name": "jsonstyle",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "directories": {
+    "example": "jsonstyle"
+  },
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oct16/jsonstyle.git"
+  },
+  "keywords": [
+    "jsonstyle"
+  ],
+  "author": "oct16",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oct16/jsonstyle/issues"
+  },
+  "homepage": "https://github.com/oct16/jsonstyle#readme"
+}
