@@ -1,4 +1,4 @@
-!function(factory) {
+;!function(factory) {
     if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {
         var target = module['exports'] || exports;
         factory(target);
@@ -24,9 +24,13 @@
             }))
         },
         toCamelCase : function(json){
-            return JSON.parse(json.replace(/[_]+[\w\d]+['"]\s?\:/g,function(a){
-                return a.replace(/[_]+[\w]/g,function(b){
-                    return b.replace(/[_]+/,'').toUpperCase()
+            return JSON.parse(json.replace(/\w+['"]\s?\:/g,function(a){
+                let upper = a.match(/[A-Z]/g)
+                return upper && upper.length == a.length - 2 ?
+                a : a.replace(/^[A-Z]{1}/,function(b){
+                    return b.toLowerCase()
+                }).replace(/[_]+[\w]/g,function(c){
+                    return c.replace(/[_]+/,'').toUpperCase()
                 })
             }))
         },
@@ -57,4 +61,4 @@
     jsonstyle.underline = function(json){
         return this.to_(json)
     }
-});
+})
