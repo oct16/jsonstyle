@@ -25,7 +25,7 @@
         },
         toCamelCase : function(json){
             return JSON.parse(json.replace(/\w+['"]\s?\:/g,function(a){
-                let upper = a.match(/[A-Z]/g)
+                var upper = a.match(/[A-Z]/g)
                 return upper && upper.length == a.length - 2 ?
                 a : a.replace(/^[A-Z]{1}/,function(b){
                     return b.toLowerCase()
