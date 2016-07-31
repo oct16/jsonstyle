@@ -12,7 +12,7 @@
     var parser = {
         to_ : function(json){
             return JSON.parse(json.replace(/\w+['"]\s?\:/g,function(a){
-                return a.replace(/_{1,}/,'_').replace(/^[A-Z]/,function(b){
+                return a.replace(/_+/g,'_').replace(/^[A-Z]/,function(b){
                     return b.toLowerCase()
                 }).replace(/[a-z\d_][A-Z]+/g,function(c){
                     return c.replace(/[_A-Z]+/,function(d){

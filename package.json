@@ -1,7 +1,7 @@
 {
   "name": "jsonstyle",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.4",
+  "description": "jsonstyle",
   "main": "src/index.js",
   "directories": {
     "example": "jsonstyle"
